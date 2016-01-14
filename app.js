@@ -14,7 +14,7 @@ var app = angular.module('wpApp', [
 //}]);
 
 app.config(['wpRestConfigProvider',function(wpRestConfigProvider){
-    wpRestConfigProvider.siteUrl = "http://angulartr.com";
+    wpRestConfigProvider.siteUrl = "";
 }]);
 
 app.config(function($sceProvider) {
