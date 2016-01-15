@@ -1,26 +1,20 @@
-home.controller('homeController', ['$rootScope', '$scope', 'wpRest', '$window',function($rootScope, $scope, wpRest,$window){
+home.controller('homeController', ['$rootScope', '$scope', 'wpRest', '$window','$stateParams',function($rootScope, $scope, wpRest,$window,$stateParams){
 
-    $scope.currentPage = 1;
+    if($stateParams.page){
+        $scope.currentPage = parseInt($stateParams.page);
+    }else{
+        $scope.currentPage = 1;
+    }
 
     wpRest.getPosts($scope.currentPage)
         .then(function(data){
-            $scope.posts = data;
+
+            if(data.length > 0){
+                $scope.posts = data;
+            }else{
+                $scope.errorMessage = "No more posts!";
+            }
+
         });
-
-    $scope.getPreviousPosts = function(){
-
-        wpRest.getPosts($scope.currentPage + 1)
-            .then(function(data){
-                if(data.length > 0){
-                    $scope.posts = data;
-                    $scope.currentPage++;
-                }else{
-                    $scope.errorMessage = "No more posts!";
-                }
-
-                $window.scrollTo(0, 0);
-
-            });
-    };
 
 }]);

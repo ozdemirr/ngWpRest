@@ -2,21 +2,19 @@
 <html ng-app="wpApp">
 <head lang="en">
     <meta charset="UTF-8">
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/loading-bar.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
     <script src="components/angular.min.js"></script>
-    <script src="components/angular-animate.js"></script>
-    <!--<script src="components/angular-sanitize.min.js"></script>-->
     <script src="components/angular-ui-router.min.js"></script>
     <script src="components/loading-bar.js"></script>
     <script src="components/ui-bootstrap-tpls-0.13.4.min.js"></script>
     <script src="components/ui-utils.min.js"></script>
 
     <script src="app.js"></script>
+    <script src="config/config.js"></script>
     <script src="config/routes.js"></script>
 
     <!--/Modules/-->
@@ -24,9 +22,15 @@
     <script src="modules/shared/main.controller.js"></script>
     <script src="modules/shared/service/wp.rest.service.js"></script>
     <script src="modules/shared/directive/categories.js"></script>
+    <script src="modules/shared/directive/author.js"></script>
+    <script src="modules/shared/directive/featuredImage.js"></script>
+    <script src="modules/shared/directive/comments.js"></script>
 
     <script src="modules/home/home.module.js"></script>
     <script src="modules/home/home.controller.js"></script>
+
+    <script src="modules/post/post.module.js"></script>
+    <script src="modules/post/post.controller.js"></script>
 
     <title>{{metaTitle}}</title>
 

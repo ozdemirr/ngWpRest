@@ -35,8 +35,36 @@ shared.factory('wpRest', ['$http', 'wpRestConfig', function($http, wpRestConfig)
             });
     };
 
+    wpRest.getPost = function(postId){
+        return $http.get(wpRest.apiUrl+ "posts/" + postId)
+            .then(function(response) {
+                return response.data;
+            });
+    };
+
     wpRest.getCategories = function(pageNumber){
         return $http.get(wpRest.apiUrl+ "categories")
+            .then(function(response) {
+                return response.data;
+            });
+    };
+
+    wpRest.getAuthor = function(id){
+        return $http.get(wpRest.apiUrl+ "users/" + id)
+            .then(function(response) {
+                return response.data;
+            });
+    };
+
+    wpRest.getFeaturedImage = function(id){
+        return $http.get(wpRest.apiUrl+ "media/" + id)
+            .then(function(response) {
+                return response.data;
+            });
+    };
+
+    wpRest.getComments = function(postId){
+        return $http.get(wpRest.apiUrl+ "comments?post=" + postId)
             .then(function(response) {
                 return response.data;
             });

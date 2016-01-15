@@ -1,0 +1,19 @@
+<div class="col-md-8">
+
+    <div class="post" ng-if="post">
+
+        <h1 ng-bind-html="post.title.rendered">
+
+        </h1>
+
+        <author id="post.author"></author>
+
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{post.date_gmt | date:'medium'}}</p>
+
+        <p ng-bind-html="post.content.rendered"></p>
+
+        <comments id="post.id"></comments>
+
+    </div>
+
+</div>
