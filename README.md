@@ -8,3 +8,8 @@ Installation ;
 - change wpRestConfigProvider.siteUrl with your site url like http://example.org 
 
 - you are ready to go :)
+- 
+
+Contributors (Special Thanks)
+
+- https://github.com/efeodabasioglu
