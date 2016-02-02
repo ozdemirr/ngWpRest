@@ -70,6 +70,13 @@ shared.factory('wpRest', ['$http', 'wpRestConfig', function($http, wpRestConfig)
             });
     };
 
+    wpRest.getTags = function(){
+        return $http.get(wpRest.apiUrl+ "tags")
+            .then(function(response) {
+                return response.data;
+            });
+    };
+
     return wpRest;
 
 }]);
