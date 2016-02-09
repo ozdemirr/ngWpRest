@@ -12,4 +12,4 @@ Installation ;
 
 Contributors (Special Thanks)
 
-- https://github.com/efeodabasioglu
+- https://github.com/efeodabasioglu || https://github.com/ahmetaniltokatli
