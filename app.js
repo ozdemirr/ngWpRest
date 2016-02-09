@@ -5,7 +5,9 @@ var app = angular.module('wpApp', [
     'ui.utils',
     'shared',
     'home',
-    'post'
+    'post',
+    'author',
+    'category'
 ]);
 
 

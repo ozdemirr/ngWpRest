@@ -56,6 +56,21 @@ shared.factory('wpRest', ['$http', 'wpRestConfig', function($http, wpRestConfig)
             });
     };
 
+    wpRest.getAuthorDetail = function(id){
+        return $http.get(wpRest.apiUrl+ "posts?filter[author]=" + id)
+            .then(function(response) {
+                return response.data;
+            });
+    };
+
+    wpRest.getCategoryDetail = function(id,page){
+        return $http.get(wpRest.apiUrl+ "posts?filter[cat]=" + id + "&page=" + page)
+            .then(function(response) {
+                console.log('aaa');
+                return response.data;
+            });
+    };
+
     wpRest.getFeaturedImage = function(id){
         return $http.get(wpRest.apiUrl+ "media/" + id)
             .then(function(response) {
