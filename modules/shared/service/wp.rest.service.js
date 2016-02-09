@@ -77,8 +77,8 @@ shared.factory('wpRest', ['$http', 'wpRestConfig', function($http, wpRestConfig)
             });
     };
 
-    wpRest.getAuthorDetail = function(id){
-        return $http.get(wpRest.apiUrl+ "posts?filter[author]=" + id)
+    wpRest.getAuthorDetail = function(id,page){
+        return $http.get(wpRest.apiUrl+ "posts?filter[author]=" + id + "&page=" + page)
             .then(function(response) {
                 return response.data;
             });
