@@ -1,0 +1,1 @@
+var category = angular.module('category',[]);

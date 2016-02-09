@@ -17,4 +17,16 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',function
             controller: "postController"
         })
 
+        .state('author', {
+            url: "/:id/:page",
+            templateUrl: "modules/author/author.view.html",
+            controller: "authorController"
+        })
+
+        .state('categoryDetail', {
+            url: "categoryDetail/:id/:page",
+            templateUrl: "modules/category/category.view.html?" + new Date().getTime(),
+            controller: "categoryController"
+        })
+
 }]);
