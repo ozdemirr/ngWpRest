@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12" ng-repeat="category in categories">
+            <h2>
+                <a ui-sref="post({ id: category.id, slug:category.slug })" ng-bind-html="category.title.rendered"></a>
+            </h2>
+            <hr>
+            <p ng-bind-html="category.excerpt.rendered"></p>
+            <a class="btn btn-primary" ui-sref="post({ id: category.id, slug:category.slug })">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <hr>
+        </div>
+
+        <ul class="pager">
+            <li class="previous" ng-if="currentPage && currentPage != 1">
+                <button class="btn btn-primary" ui-sref="categoryDetail({id: categoryId, page: currentPage - 1 })">&larr; Older</button>
+            </li>
+            <li class="next">
+                <button class="btn btn-primary" ui-sref="categoryDetail({id: categoryId, page: currentPage + 1 })">Newer &rarr;</button>
+            </li>
+        </ul>
+    </div>
+</div>
