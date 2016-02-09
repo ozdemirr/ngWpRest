@@ -7,7 +7,7 @@ author.controller('authorController', ['$rootScope', '$scope', 'wpRest', '$windo
         $scope.currentPage = 1;
     }
 
-    wpRest.getAuthorDetail($scope.authorId)
+    wpRest.getAuthorDetail($scope.authorId, $scope.currentPage)
         .then(function(data){
             $scope.authorPosts = data;
         }, function(){
