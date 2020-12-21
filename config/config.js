@@ -4,7 +4,7 @@ app.config(['$httpProvider', function ($httpProvider) {
 }]);
 
 app.config(['wpRestConfigProvider',function(wpRestConfigProvider){
-    wpRestConfigProvider.siteUrl = "http://angulartr.com";
+    wpRestConfigProvider.siteUrl = "https://gelistir.net";
 }]);
 
 app.config(function($sceProvider) {
