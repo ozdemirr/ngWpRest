@@ -9,10 +9,3 @@ var app = angular.module('wpApp', [
     'author',
     'category'
 ]);
-
-
-
-
-
-
-
